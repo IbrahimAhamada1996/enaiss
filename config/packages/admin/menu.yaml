@@ -1,0 +1,7 @@
+easy_admin:
+  design:
+    brand_color: "#222"
+    menu:
+      - label: "ENAISS"
+        icon: "home"
+        children:
