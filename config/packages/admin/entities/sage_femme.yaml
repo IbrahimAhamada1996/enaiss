@@ -1,0 +1,9 @@
+easy_admin:
+  entities:
+    SageFemme:
+      class: App\Entity\SageFemme
+      list:
+        title: "liste des SageFemme"
+        help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore,
+        "

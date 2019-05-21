@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\SageFemmeRepository")
+ * @ORM\Table(name="sage_femme")
  */
 class SageFemme
 {
@@ -82,17 +83,6 @@ class SageFemme
         return $this;
     }
 
-    public function getTelephone(): ?string
-    {
-        return $this->telephone;
-    }
-
-    public function setTelephone(string $telephone): self
-    {
-        $this->telephone = $telephone;
-
-        return $this;
-    }
 
     public function getEmail(): ?string
     {
@@ -102,6 +92,19 @@ class SageFemme
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+
+    public function getTelephone(): ?string
+    {
+        return $this->telephone;
+    }
+
+    public function setTelephone(string $telephone): self
+    {
+        $this->telephone = $telephone;
 
         return $this;
     }

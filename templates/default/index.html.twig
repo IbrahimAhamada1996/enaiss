@@ -1,15 +1,14 @@
-{% extends 'base.html.twig' %}
 
-{% block title %}Hello ibbrahim{% endblock %}
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Hello | ENaiss{% endblock %}
 
 {% block body %}
-         <div class="super_container">
-          
-          {{include('layouts/_info.html.twig')}}
-          {{include('layouts/_cta.html.twig')}}
-          {{include('layouts/_service.html.twig')}}
-          {{include('layouts/_departement.html.twig')}}
-          {{include('layouts/_new.html.twig')}}
-        
-       </div>
+	{{include('layouts/_infobox.html.twig')}}
+	{{include('layouts/_infoform.html.twig')}}
+	{{include('layouts/_cta.html.twig')}}
+	{{include('layouts/_services.html.twig')}}
+	{{include('layouts/_departement.html.twig')}}
+	{{include('layouts/_news.html.twig')}}
+
 {% endblock %}
