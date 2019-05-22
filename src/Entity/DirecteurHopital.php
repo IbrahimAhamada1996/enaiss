@@ -5,11 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\SageFemmeRepository")
- * @ORM\Table(name="sage_femme")
+ * @ORM\Entity(repositoryClass="App\Repository\DirecteurHopitalRepository")
  */
-
-class SageFemme
+class DirecteurHopital
 {
     /**
      * @ORM\Id()
@@ -19,29 +17,24 @@ class SageFemme
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=50)
      */
     private $nom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=50)
      */
     private $prenom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=20)
      */
-    private $adress;
+    private $telephone;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $email;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $telephone;
 
     public function getId(): ?int
     {
@@ -72,14 +65,14 @@ class SageFemme
         return $this;
     }
 
-    public function getAdress(): ?string
+    public function getTelephone(): ?string
     {
-        return $this->adress;
+        return $this->telephone;
     }
 
-    public function setAdress(string $adress): self
+    public function setTelephone(string $telephone): self
     {
-        $this->adress = $adress;
+        $this->telephone = $telephone;
 
         return $this;
     }
@@ -92,18 +85,6 @@ class SageFemme
     public function setEmail(string $email): self
     {
         $this->email = $email;
-
-        return $this;
-    }
-
-    public function getTelephone(): ?string
-    {
-        return $this->telephone;
-    }
-
-    public function setTelephone(string $telephone): self
-    {
-        $this->telephone = $telephone;
 
         return $this;
     }

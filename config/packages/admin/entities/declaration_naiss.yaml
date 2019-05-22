@@ -1,0 +1,53 @@
+easy_admin:
+  entities:
+    DeclarationNaiss:
+      class: App\Entity\DeclarationNaiss
+      list:
+        title: "liste des Declaration Naissance"
+        help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore,
+        "
+        actions:
+          - {name: "new", label: "creer une Declaration", icon: "plus fa-fw" }
+          - {name: "edit", icon: "pencil", label: false, css_class: "btn btn-outline-secondary"}
+          - {name: "delete", label: false, icon: "trash", css_class: "btn btn-outline-danger"}
+
+        fields:
+          - {property : id, label: '#ID'}
+          - {property : sousigne, label: 'Sousigne'}
+          - {property : nomme, label: 'Nommée'}
+          - {property : epouse, label: 'Epouse'}
+          - {property : age_mere, label: 'Age mere'}
+          - {property : profession, label: 'Profession'}
+          - {property : adress, label: 'Adress'}
+          - {property : date_naiss, label: 'Date Naissance'}
+          - {property : nom_prefecture, label: 'Prefecture'}
+          - {property : date_accouch, label: 'date accouchement'}
+          - {property : heure_accouch, label: 'heure accouchement'}
+          - {property : sexe_enfant, label: 'sexe enfant'}
+          - {property : prenom_enfant, label: 'Pere'}
+          - {property : date_decla, label: 'date_declaration'}
+          - {property : lieu_declare, label: 'lieu_declare'}
+      new:
+        title: "Formulaire pour creer une Declaration"
+        help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        ."
+
+      form:
+        form_options: { validation_groups: ['default']}
+        fields:
+          - {property : sousigne, label: ''}
+          - {property : nomme, label: ''}
+          - {property : epouse, label: ''}
+          - {property : age_mere, label: ''}
+          - {property : profession, label: ''}
+          - {property : adress, label: ''}
+          - {property : date_naiss, label: ''}
+          - {property : nom_prefecture, label: ''}
+          - {property : date_accouch, label: ''}
+          - {property : heure_accouch, label: ''}
+          - {property : sexe_enfant, label: ''}
+          - {property : prenom_enfant, label: ''}
+          - {property : date_decla, label: ''}
+          - {property : lieu_declare, label: ''}
