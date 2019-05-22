@@ -1,26 +1,25 @@
 easy_admin:
   entities:
-    SageFemme:
-      class: App\Entity\SageFemme
+    DirecteurPrefecture:
+      class: App\Entity\DirecteurPrefecture
       list:
-        title: "liste des SageFemme"
+        title: "liste des Directeurs Prefecture"
         help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore,
         "
         actions:
-          - {name: "new", label: "creer une Sage_Femme", icon: "plus fa-fw" }
+          - {name: "new", label: "creer un Directeur Prefecture", icon: "plus fa-fw" }
           - {name: "edit", icon: "pencil", label: false, css_class: "btn btn-outline-secondary"}
           - {name: "delete", label: false, icon: "trash", css_class: "btn btn-outline-danger"}
 
         fields:
           - {property : id, label: '#ID'}
           - {property : nom, label: 'Nom&Prenom'}
-          - {property : adress, label: 'Adress'}
-          - {property : email, label: 'Email'}
           - {property : telephone, label: 'Telephone'}
+          - {property : email, label: 'Email'}
 
       new:
-        title: "Formulaire pour creer une Sage_Femme"
+        title: "Formulaire pour creer un Directeur Prefecture"
         help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         ."
@@ -30,6 +29,5 @@ easy_admin:
         fields:
           - {property : nom, label: 'Nom'}
           - {property : prenom, label: 'Prenom'}
-          - {property : adress, label: 'Adress'}
-          - {property : email, label: 'Email'}
           - {property : telephone, label: 'Telephone'}
+          - {property : email, label: 'Email'}
