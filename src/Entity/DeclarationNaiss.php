@@ -67,7 +67,7 @@ class DeclarationNaiss
     private $heure_accouch;
 
     /**
-     * @ORM\Column(type="string", length=2)
+     * @ORM\Column(type="string", length=255)
      */
     private $sexe_enfant;
 
