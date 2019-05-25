@@ -10,7 +10,7 @@ easy_admin:
           - {entity: Hopital, icon: "hospital-o", label: "Hopital"}
           - {entity: DeclarationNaiss, icon: "folder-o", label: "Declaration Naissance"}
       - label: "Prefecture"
-        icon: "medkit"
+        icon: "building-o"
         children:
           - {entity: DirecteurPrefecture, icon: "street-view", label: "Directeur Prefecture"}
           - {entity: AgentPrefecture, icon: "user", label: "Agent Prefecture"}
