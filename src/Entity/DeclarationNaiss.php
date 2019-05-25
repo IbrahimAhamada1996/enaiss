@@ -51,20 +51,13 @@ class DeclarationNaiss
      */
     private $date_naiss;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $nom_prefecture;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="datetime")
      */
-    private $date_accouch;
+    private $date_heure_accouch;
 
-    /**
-     * @ORM\Column(type="time")
-     */
-    private $heure_accouch;
+
 
     /**
      * @ORM\Column(type="string", length=255)

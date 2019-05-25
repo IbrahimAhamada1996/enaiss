@@ -5,18 +5,7 @@ easy_admin:
       - label: "Hopital"
         icon: "medkit"
         children:
-          - {entity: DirecteurHopital, icon: "street-view", label: "Directeur Hopital"}
-          - {entity: SageFemme, icon: "female", label: "Sage femme"}
-          - {entity: Hopital, icon: "hospital-o", label: "Hopital"}
           - {entity: DeclarationNaiss, icon: "folder-o", label: "Declaration Naissance"}
       - label: "Prefecture"
-        icon: "medkit"
-        children:
-          - {entity: DirecteurPrefecture, icon: "street-view", label: "Directeur Prefecture"}
-          - {entity: AgentPrefecture, icon: "user", label: "Agent Prefecture"}
-          - {entity: Prefecture, icon: "building-o", label: "Prefecture"}
-          - {entity: Extrait, icon: "file-text-o", label: "Extrait"}
-      - label: "Economi"
-        icon: "bar-chart"
-        children:
-          - {entity: AgentEconomie, icon: "bar-chart", label: "Agent Economie"}
+        icon: "building-o"
+        
