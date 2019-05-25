@@ -5,10 +5,10 @@ easy_admin:
       - label: "ENAISS"
         icon: "medkit"
         children:
+          - {entity: DirecteurHopital, icon: "street-view", label: "Directeur Hopital"}
           - {entity: SageFemme, icon: "female", label: "Sage femme"}
           - {entity: Hopital, icon: "hospital-o", label: "Hopital"}
           - {entity: DeclarationNaiss, icon: "folder-o", label: "Declaration Naissance"}
-          - {entity: DirecteurHopital, icon: "street-view", label: "Directeur Hopital"}
           - {entity: AgentPrefecture, icon: "user", label: "Agent Prefecture"}
           - {entity: Prefecture, icon: "building-o", label: "Prefecture"}
           - {entity: AgentEconomie, icon: "bar-chart", label: "Agent Economie"}
