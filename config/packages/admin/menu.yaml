@@ -16,7 +16,7 @@ easy_admin:
           - {entity: AgentPrefecture, icon: "user", label: "Agent Prefecture"}
           - {entity: Prefecture, icon: "building-o", label: "Prefecture"}
           - {entity: Extrait, icon: "file-text-o", label: "Extrait"}
-      - label: "Economie"
-        children:
+      - label: "Economi"
         icon: "bar-chart"
+        children:
           - {entity: AgentEconomie, icon: "bar-chart", label: "Agent Economie"}
