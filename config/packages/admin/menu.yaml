@@ -2,7 +2,7 @@ easy_admin:
   design:
     brand_color: "#222"
     menu:
-      - label: "ENAISS"
+      - label: "Hopital"
         icon: "medkit"
         children:
           - {entity: DirecteurHopital, icon: "street-view", label: "Directeur Hopital"}
@@ -11,10 +11,12 @@ easy_admin:
           - {entity: DeclarationNaiss, icon: "folder-o", label: "Declaration Naissance"}
       - label: "Prefecture"
         icon: "medkit"
+        children:
           - {entity: DirecteurPrefecture, icon: "street-view", label: "Directeur Prefecture"}
           - {entity: AgentPrefecture, icon: "user", label: "Agent Prefecture"}
           - {entity: Prefecture, icon: "building-o", label: "Prefecture"}
           - {entity: Extrait, icon: "file-text-o", label: "Extrait"}
       - label: "Economie"
         icon: "medkit"
+        children:
           - {entity: AgentEconomie, icon: "bar-chart", label: "Agent Economie"}
