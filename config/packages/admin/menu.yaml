@@ -9,9 +9,12 @@ easy_admin:
           - {entity: SageFemme, icon: "female", label: "Sage femme"}
           - {entity: Hopital, icon: "hospital-o", label: "Hopital"}
           - {entity: DeclarationNaiss, icon: "folder-o", label: "Declaration Naissance"}
+      - label: "Prefecture"
+        icon: "medkit"
+          - {entity: DirecteurPrefecture, icon: "street-view", label: "Directeur Prefecture"}
           - {entity: AgentPrefecture, icon: "user", label: "Agent Prefecture"}
           - {entity: Prefecture, icon: "building-o", label: "Prefecture"}
-          - {entity: AgentEconomie, icon: "bar-chart", label: "Agent Economie"}
           - {entity: Extrait, icon: "file-text-o", label: "Extrait"}
-          - {entity: DirecteurPrefecture, icon: "street-view", label: "Directeur Prefecture"}
-
+      - label: "Economie"
+        icon: "medkit"
+          - {entity: AgentEconomie, icon: "bar-chart", label: "Agent Economie"}
