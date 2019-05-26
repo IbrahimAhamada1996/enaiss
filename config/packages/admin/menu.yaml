@@ -1,0 +1,11 @@
+easy_admin:
+  design:
+    brand_color: "#222"
+    menu:
+      - label: "Hopital"
+        icon: "medkit"
+        children:
+          - {entity: DeclarationNaiss, icon: "folder-o", label: "Declaration Naissance"}
+      - label: "Prefecture"
+        icon: "building-o"
+        
