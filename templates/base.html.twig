@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}
+        
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->  
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
 <!--===============================================================================================-->
-    {% endblock %}
+    {% block stylesheets %}{% endblock %}
     </head>
     <body>
 
@@ -36,7 +36,7 @@
         {% endblock %}
  
 
-    {% block javascripts %}
+    
 <!--===============================================================================================-->
     <script src="{{asset('vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 <!--===============================================================================================-->
@@ -53,6 +53,6 @@
     <script src="{{asset('js/main.js')}}vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
     <script src="{{asset('js/main.js')}}"></script>
-    {% endblock %}
+    {% block javascripts %}{% endblock %}
     </body>
 </html>
