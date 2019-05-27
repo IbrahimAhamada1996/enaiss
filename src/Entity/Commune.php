@@ -26,11 +26,6 @@ class Commune
      */
     private $ile;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\LieuTravail", inversedBy="idcom")
-     */
-    private $lieuTravail;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -56,18 +51,6 @@ class Commune
     public function setIle(string $ile): self
     {
         $this->ile = $ile;
-
-        return $this;
-    }
-
-    public function getLieuTravail(): ?LieuTravail
-    {
-        return $this->lieuTravail;
-    }
-
-    public function setLieuTravail(?LieuTravail $lieuTravail): self
-    {
-        $this->lieuTravail = $lieuTravail;
 
         return $this;
     }

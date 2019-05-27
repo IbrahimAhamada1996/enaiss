@@ -2,8 +2,6 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -19,34 +17,19 @@ class LieuTravail
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $adress;
+    private $adresse;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
-    private $telephone;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $email;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\commune", mappedBy="lieuTravail")
-     */
-    private $idcom;
-
-    public function __construct()
-    {
-        $this->idcom = new ArrayCollection();
-    }
+    private $lephone;
 
     public function getId(): ?int
     {
@@ -65,69 +48,26 @@ class LieuTravail
         return $this;
     }
 
-    public function getAdress(): ?string
+    public function getAdresse(): ?string
     {
-        return $this->adress;
+        return $this->adresse;
     }
 
-    public function setAdress(string $adress): self
+    public function setAdresse(string $adresse): self
     {
-        $this->adress = $adress;
+        $this->adresse = $adresse;
 
         return $this;
     }
 
-    public function getTelephone(): ?string
+    public function getLephone(): ?string
     {
-        return $this->telephone;
+        return $this->lephone;
     }
 
-    public function setTelephone(?string $telephone): self
+    public function setLephone(string $lephone): self
     {
-        $this->telephone = $telephone;
-
-        return $this;
-    }
-
-    public function getEmail(): ?string
-    {
-        return $this->email;
-    }
-
-    public function setEmail(?string $email): self
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|commune[]
-     */
-    public function getIdcom(): Collection
-    {
-        return $this->idcom;
-    }
-
-    public function addIdcom(commune $idcom): self
-    {
-        if (!$this->idcom->contains($idcom)) {
-            $this->idcom[] = $idcom;
-            $idcom->setLieuTravail($this);
-        }
-
-        return $this;
-    }
-
-    public function removeIdcom(commune $idcom): self
-    {
-        if ($this->idcom->contains($idcom)) {
-            $this->idcom->removeElement($idcom);
-            // set the owning side to null (unless already changed)
-            if ($idcom->getLieuTravail() === $this) {
-                $idcom->setLieuTravail(null);
-            }
-        }
+        $this->lephone = $lephone;
 
         return $this;
     }
