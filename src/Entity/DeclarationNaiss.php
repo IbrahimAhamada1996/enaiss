@@ -84,6 +84,13 @@ class DeclarationNaiss
      */
     private $lieu_declare;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Personnel", inversedBy="declarations")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $personnel;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -268,4 +275,18 @@ class DeclarationNaiss
 
         return $this;
     }
+
+    public function getPersonnel(): ?Personnel
+    {
+        return $this->personnel;
+    }
+
+    public function setPersonnel(?Personnel $personnel): self
+    {
+        $this->personnel = $personnel;
+
+        return $this;
+    }
+
+   
 }

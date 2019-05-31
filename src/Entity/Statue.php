@@ -21,6 +21,14 @@ class Statue
      */
     private $nom;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Personnel", inversedBy="statues")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $personnel;
+
+   
+
     public function getId(): ?int
     {
         return $this->id;
@@ -37,4 +45,18 @@ class Statue
 
         return $this;
     }
+
+    public function getPersonnel(): ?Personnel
+    {
+        return $this->personnel;
+    }
+
+    public function setPersonnel(?Personnel $personnel): self
+    {
+        $this->personnel = $personnel;
+
+        return $this;
+    }
+
+   
 }
