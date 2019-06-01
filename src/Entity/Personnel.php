@@ -30,21 +30,24 @@ class Personnel
     private $prenom;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Statue", mappedBy="personnel")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Statue", inversedBy="personnels")
      */
-    private $statues;
-
+    private $status;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\DeclarationNaiss", mappedBy="personnel")
+     * @ORM\ManyToOne(targetEntity="App\Entity\LieuTravail", inversedBy="personnels")
      */
-    private $declarations;
+    private $lieu;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\DeclarationNaiss", inversedBy="personnels")
+     */
+    private $declaration;
 
 
-    public function __construct()
+    public function __toString()
     {
-        $this->statues = new ArrayCollection();
-        $this->declarations = new ArrayCollection();
+        return $this->getNom();
     }
 
     public function getId(): ?int
@@ -76,66 +79,40 @@ class Personnel
         return $this;
     }
 
-    /**
-     * @return Collection|Statue[]
-     */
-    public function getStatues(): Collection
+    public function getStatus(): ?Statue
     {
-        return $this->statues;
+        return $this->status;
     }
 
-    public function addStatue(Statue $statue): self
+    public function setStatus(?Statue $status): self
     {
-        if (!$this->statues->contains($statue)) {
-            $this->statues[] = $statue;
-            $statue->setPersonnel($this);
-        }
+        $this->status = $status;
 
         return $this;
     }
 
-    public function removeStatue(Statue $statue): self
+    public function getLieu(): ?LieuTravail
     {
-        if ($this->statues->contains($statue)) {
-            $this->statues->removeElement($statue);
-            // set the owning side to null (unless already changed)
-            if ($statue->getPersonnel() === $this) {
-                $statue->setPersonnel(null);
-            }
-        }
+        return $this->lieu;
+    }
+
+    public function setLieu(?LieuTravail $lieu): self
+    {
+        $this->lieu = $lieu;
 
         return $this;
     }
 
-
-    /**
-     * @return Collection|DeclarationNaiss[]
-     */
-    public function getDeclarations(): Collection
+    public function getDeclaration(): ?DeclarationNaiss
     {
-        return $this->declarations;
+        return $this->declaration;
     }
 
-    public function addDeclaration(DeclarationNaiss $declaration): self
+    public function setDeclaration(?DeclarationNaiss $declaration): self
     {
-        if (!$this->declarations->contains($declaration)) {
-            $this->declarations[] = $declaration;
-            $declaration->setPersonnel($this);
-        }
+        $this->declaration = $declaration;
 
         return $this;
     }
 
-    public function removeDeclaration(DeclarationNaiss $declaration): self
-    {
-        if ($this->declarations->contains($declaration)) {
-            $this->declarations->removeElement($declaration);
-            // set the owning side to null (unless already changed)
-            if ($declaration->getPersonnel() === $this) {
-                $declaration->setPersonnel(null);
-            }
-        }
-
-        return $this;
-    }
 }

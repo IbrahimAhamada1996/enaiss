@@ -28,3 +28,6 @@ easy_admin:
         fields:
           - {property : nom, label: 'Nom'}
           - {property : prenom, label: 'Prenom'}
+          - {property : status, label: 'status'}
+          - {property : lieu, label: 'lieu'}
+

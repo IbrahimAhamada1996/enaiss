@@ -26,4 +26,4 @@ easy_admin:
         form_options: { validation_groups: ['default']}
         fields:
           - {property : nom, label: 'Nom'}
-          - {property : ile, label: 'Ile'}
+          - {property: "ile", label: "ile", type: "choice", type_options: {expanded: false, choices: {"Ngazidja": "Ngazidja","Anjouan": "Anjouan", "Moheli": "Moheli", "Maore": "Maore"}}}

@@ -32,6 +32,16 @@ class LieuTravail
      */
     private $telephone;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Commune", inversedBy="lieuTravails")
+     */
+    private $commune;
+
+    public function __toString()
+    {
+        return $this->getNom();
+    }
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +79,18 @@ class LieuTravail
     public function setTelephone(string $telephone): self
     {
         $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    public function getCommune(): ?Commune
+    {
+        return $this->commune;
+    }
+
+    public function setCommune(?Commune $commune): self
+    {
+        $this->commune = $commune;
 
         return $this;
     }

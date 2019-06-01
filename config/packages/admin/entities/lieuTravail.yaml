@@ -30,3 +30,4 @@ easy_admin:
           - {property : nom, label: 'nom'}
           - {property : adresse, label: 'adresse'}
           - {property : telephone, label: 'telephone'}
+          - {property : commune, label: 'commune'}
