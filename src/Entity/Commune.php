@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CommuneRepository")
+ * @ORM\Table(name="enaiss_communes")
  */
 class Commune
 {
@@ -25,11 +26,7 @@ class Commune
      * @ORM\Column(type="string", length=255)
      */
     private $ile;
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Lieu", inversedBy="comunes")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $lieu;
+    
 
     public function getId(): ?int
     {
@@ -56,19 +53,6 @@ class Commune
     public function setIle(string $ile): self
     {
         $this->ile = $ile;
-
-        return $this;
-    }
-
-
-    public function getLieu(): ?Lieu
-    {
-        return $this->lieu;
-    }
-
-    public function setLieu(?Lieu $lieu): self
-    {
-        $this->lieu = $lieu;
 
         return $this;
     }

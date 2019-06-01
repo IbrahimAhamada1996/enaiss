@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\StatueRepository")
+ * @ORM\Table(name="enaiss_statues")
  */
 class Statue
 {

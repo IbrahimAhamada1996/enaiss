@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PersonnelRepository")
+ * @ORM\Table(name="enaiss_personnels")
  */
 class Personnel
 {
@@ -39,16 +40,11 @@ class Personnel
      */
     private $declarations;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Lieu", mappedBy="personnel")
-     */
-    private $lieus;
 
     public function __construct()
     {
         $this->statues = new ArrayCollection();
         $this->declarations = new ArrayCollection();
-        $this->lieus = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -137,37 +133,6 @@ class Personnel
             // set the owning side to null (unless already changed)
             if ($declaration->getPersonnel() === $this) {
                 $declaration->setPersonnel(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Lieu[]
-     */
-    public function getLieus(): Collection
-    {
-        return $this->lieus;
-    }
-
-    public function addLieus(Lieu $lieus): self
-    {
-        if (!$this->lieus->contains($lieus)) {
-            $this->lieus[] = $lieus;
-            $lieus->setPersonnel($this);
-        }
-
-        return $this;
-    }
-
-    public function removeLieus(Lieu $lieus): self
-    {
-        if ($this->lieus->contains($lieus)) {
-            $this->lieus->removeElement($lieus);
-            // set the owning side to null (unless already changed)
-            if ($lieus->getPersonnel() === $this) {
-                $lieus->setPersonnel(null);
             }
         }
 
