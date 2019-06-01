@@ -33,11 +33,6 @@ class Personnel
      */
     private $statues;
 
-    /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Utilisateur", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $utilisateurs;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\DeclarationNaiss", mappedBy="personnel")
@@ -116,17 +111,6 @@ class Personnel
         return $this;
     }
 
-    public function getUtilisateurs(): ?Utilisateur
-    {
-        return $this->utilisateurs;
-    }
-
-    public function setUtilisateurs(Utilisateur $utilisateurs): self
-    {
-        $this->utilisateurs = $utilisateurs;
-
-        return $this;
-    }
 
     /**
      * @return Collection|DeclarationNaiss[]
