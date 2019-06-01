@@ -1,23 +1,25 @@
 easy_admin:
   entities:
-    Commune:
-      class: App\Entity\Commune
+    LieuTravail:
+      class: App\Entity\LieuTravail
       list:
-        title: "liste des Communes"
+        title: "liste des lieus de trvail"
         help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore,
         "
         actions:
-          - {name: "new", label: "creer une Commune", icon: "plus fa-fw" }
+          - {name: "new", label: "creer un lieu de travail", icon: "plus fa-fw" }
           - {name: "edit", icon: "pencil", label: false, css_class: "btn btn-outline-secondary"}
           - {name: "delete", label: false, icon: "trash", css_class: "btn btn-outline-danger"}
 
         fields:
           - {property : id, label: '#ID'}
-          - {property : nom, label: 'Nom'}
-          - {property : ile, label: 'Ile'}
+          - {property : nom, label: 'nom'}
+          - {property : adresse, label: 'adresse'}
+          - {property : telephone, label: 'telephone'}
+          
       new:
-        title: "Formulaire pour creer commune"
+        title: "Formulaire pour creer un lieu de travail"
         help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         ."
@@ -25,5 +27,6 @@ easy_admin:
       form:
         form_options: { validation_groups: ['default']}
         fields:
-          - {property : nom, label: 'Nom'}
-          - {property : ile, label: 'Ile'}
+          - {property : nom, label: 'nom'}
+          - {property : adresse, label: 'adresse'}
+          - {property : telephone, label: 'telephone'}

@@ -30,7 +30,7 @@ class LieuTravail
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $lephone;
+    private $telephone;
 
     public function getId(): ?int
     {
@@ -61,14 +61,14 @@ class LieuTravail
         return $this;
     }
 
-    public function getLephone(): ?string
+    public function getTelephone(): ?string
     {
-        return $this->lephone;
+        return $this->telephone;
     }
 
-    public function setLephone(string $lephone): self
+    public function setTelephone(string $telephone): self
     {
-        $this->lephone = $lephone;
+        $this->telephone = $telephone;
 
         return $this;
     }

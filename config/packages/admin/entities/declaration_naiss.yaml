@@ -15,15 +15,11 @@ easy_admin:
         fields:
           - {property : id, label: '#ID'}
           - {property : sousigne, label: 'Sousigne'}
-          - {property : nomme, label: 'Nommée'}
           - {property : epouse, label: 'Epouse'}
           - {property : nom_prefecture, label: 'Prefecture'}
           - {property : date_accouch, label: 'date accouchement'}
-          - {property : heure_accouch, label: 'heure accouchement'}
-          - {property : sexe_enfant, label: 'sexe enfant'}
           - {property : prenom_enfant, label: 'Pere'}
           - {property : date_decla, label: 'date_declaration'}
-          - {property : lieu_declare, label: 'lieu_declare'}
       new:
         title: "Formulaire pour creer une Declaration"
         help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

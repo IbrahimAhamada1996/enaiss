@@ -1,23 +1,24 @@
 easy_admin:
   entities:
-    Commune:
-      class: App\Entity\Commune
+    Personnel:
+      class: App\Entity\Personnel
       list:
-        title: "liste des Communes"
+        title: "liste des personnels"
         help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore,
         "
         actions:
-          - {name: "new", label: "creer une Commune", icon: "plus fa-fw" }
+          - {name: "new", label: "creer une personnel", icon: "plus fa-fw" }
           - {name: "edit", icon: "pencil", label: false, css_class: "btn btn-outline-secondary"}
           - {name: "delete", label: false, icon: "trash", css_class: "btn btn-outline-danger"}
 
         fields:
           - {property : id, label: '#ID'}
           - {property : nom, label: 'Nom'}
-          - {property : ile, label: 'Ile'}
+          - {property : prenom, label: 'Prenom'}
+
       new:
-        title: "Formulaire pour creer commune"
+        title: "Formulaire pour creer personnel"
         help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         ."
@@ -26,4 +27,4 @@ easy_admin:
         form_options: { validation_groups: ['default']}
         fields:
           - {property : nom, label: 'Nom'}
-          - {property : ile, label: 'Ile'}
+          - {property : prenom, label: 'Prenom'}

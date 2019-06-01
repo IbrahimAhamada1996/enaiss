@@ -6,6 +6,17 @@ easy_admin:
         icon: "medkit"
         children:
           - {entity: DeclarationNaiss, icon: "folder-o", label: "Declaration Naissance"}
-      - label: "Prefecture"
+
+      - label: "Departement"
         icon: "building-o"
+        children:
+          - {entity: Commune, icon: "bookmark-o", label: "Commune"}
+          - {entity: LieuTravail, icon: "building", label: "LieuTravail"}
+          
+      - label: "Personnel"
+        icon: "user"
+        children:
+          - {entity: Personnel, icon: "id-card-o", label: "Personnel"}
+          - {entity: Statue, icon: "flag-o", label: "Statue"}
+          
         
