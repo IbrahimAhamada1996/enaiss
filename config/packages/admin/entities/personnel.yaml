@@ -17,6 +17,8 @@ easy_admin:
           - {property : id, label: '#ID'}
           - {property : nom, label: 'Nom'}
           - {property : prenom, label: 'Prenom'}
+          - {property : status, label: 'Profession'}
+          - {property : lieu, label: 'lieu de travail'}
 
       new:
         title: "Formulaire pour creer personnel"
@@ -29,6 +31,6 @@ easy_admin:
         fields:
           - {property : nom, label: 'Nom'}
           - {property : prenom, label: 'Prenom'}
-          - {property : status, label: 'status'}
-          - {property : lieu, label: 'lieu'}
+          - {property : status, label: 'Profession'}
+          - {property : lieu, label: 'lieu de travail'}
 
