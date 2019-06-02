@@ -16,7 +16,6 @@ easy_admin:
           - {property : id, label: '#ID'}
           - {property : sousigne, label: 'Sousigne'}
           - {property : epouse, label: 'Epouse'}
-          - {property : nom_prefecture, label: 'Prefecture'}
           - {property : date_accouch, label: 'date accouchement'}
           - {property : prenom_enfant, label: 'Pere'}
           - {property : date_decla, label: 'date_declaration'}
@@ -29,17 +28,15 @@ easy_admin:
       form:
         form_options: { validation_groups: ['default']}
         fields:
-          - {property : sousigne, label: ''}
-          - {property : nomme, label: ''}
-          - {property : epouse, label: ''}
-          - {property : age_mere, label: ''}
-          - {property : profession, label: ''}
-          - {property : adress, label: ''}
-          - {property : date_naiss, label: ''}
-          - {property : nom_prefecture, label: ''}
-          - {property : date_accouch, label: ''}
-          - {property : heure_accouch, label: ''}
-          - {property : sexe_enfant, label: ''}
-          - {property : prenom_enfant, label: ''}
-          - {property : date_decla, label: ''}
-          - {property : lieu_declare, label: ''}
+          - {property : sousigne, label: 'sousigne'}
+          - {property : nomme, label: 'nomme'}
+          - {property : epouse, label: 'epouse'}
+          - {property : age_mere, label: 'age_mere'}
+          - {property : profession, label: 'profession'}
+          - {property : adress, label: 'adress'}
+          - {property : date_naiss, label: 'date_naiss'}
+          - {property : date_heure_accouch, label: 'date_accouch'}
+          - {property : sexe_enfant, label: 'sexe_enfant'}
+          - {property : prenom_enfant, label: 'prenom_enfant'}
+          - {property : date_decla, label: 'date_decla'}
+          - {property : lieu_declare, label: 'lieu_declare'}
