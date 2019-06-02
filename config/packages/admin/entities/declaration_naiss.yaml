@@ -17,7 +17,7 @@ easy_admin:
           - {property : id, label: '#ID'}
           - {property : sousigne, label: 'Sousigne'}
           - {property : epouse, label: 'Epouse'}
-          - {property : date_accouch, label: 'date accouchement'}
+          - {property : date_heure_accouch, label: 'date accouchement'}
           - {property : prenom_enfant, label: 'Pere'}
           - {property : date_decla, label: 'date_declaration'}
       new:
@@ -38,6 +38,7 @@ easy_admin:
           - {property : date_naiss, label: 'date_naiss'}
           - {property : date_heure_accouch, label: 'date_accouch'}
           - {property : sexe_enfant, label: 'sexe_enfant'}
-          - {property : prenom_enfant, label: 'prenom_enfant'}
+          - {property : nom_enfant, label: 'nom enfant'}
+          - {property : prenom_enfant, label: 'prenom enfant'}
           - {property : date_decla, label: 'date_decla'}
           - {property : lieu_declare, label: 'lieu_declare'}
