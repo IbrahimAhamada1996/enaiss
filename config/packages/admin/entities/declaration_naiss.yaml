@@ -37,6 +37,7 @@ easy_admin:
           - {property : adress, label: 'adress'}
           - {property : date_naiss, label: 'date_naiss'}
           - {property : date_heure_accouch, label: 'date_accouch'}
+          - {property: "sexe_enfant", label: "sexe enfant", type: "choice", type_options: {expanded: false, choices: {"masculin": "Masculin","feminin": "Feminin"}}}
           - {property : sexe_enfant, label: 'sexe_enfant'}
           - {property : nom_enfant, label: 'nom enfant'}
           - {property : prenom_enfant, label: 'prenom enfant'}

@@ -5,7 +5,12 @@ security:
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: ROLE_ADMIN
+        ROLE_SAGE_FEMME:    [ROLE_ADMIN, ROLE_SAGE_FEMME]
+        ROLE_ADMIN_HOPITAL: [ROLE_ADMIN, ROLE_ADMIN_HOPITAL]
+        ROLE_ADMIN_PREFECTURE:  [ROLE_ADMIN, ROLE_ADMIN_PREFECTURE]
+        ROLE_AGENT_PREFECTURE:  [ROLE_ADMIN, ROLE_AGENT_PREFECTURE]
+        ROLE_AGENT_ECONOMIQUE:  [ROLE_ADMIN, ROLE_AGENT_ECONOMIQUE]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
