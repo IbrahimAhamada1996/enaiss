@@ -2,6 +2,7 @@ easy_admin:
   entities:
     LieuTravail:
       class: App\Entity\LieuTravail
+      role: [ROLE_SUPER_ADMIN]
       list:
         title: "liste des lieus de trvail"
         help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

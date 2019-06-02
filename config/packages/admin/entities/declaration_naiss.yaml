@@ -2,6 +2,7 @@ easy_admin:
   entities:
     DeclarationNaiss:
       class: App\Entity\DeclarationNaiss
+      role: [ROLE_SUPER_ADMIN]
       list:
         title: "liste des Declaration Naissance"
         help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

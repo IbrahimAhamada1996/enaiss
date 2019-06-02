@@ -2,6 +2,7 @@ easy_admin:
   entities:
     Personnel:
       class: App\Entity\Personnel
+      role: [ROLE_SUPER_ADMIN]
       list:
         title: "liste des personnels"
         help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

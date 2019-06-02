@@ -1,0 +1,57 @@
+easy_admin:
+    entities:
+        User:
+            class: App\Entity\User
+            # controller: App\Controller\UserController
+            role: [ROLE_SUPER_ADMIN]
+            
+            list:
+                title: "Liste des utilisateurs"
+                actions : 
+                    - { name : "new" , label : "Ajouter un utilisateur", icon : "plus fa-fw"}
+                    - { name: "show",  icon : "eye" , label : false , css_class : "btn btn-outline-success" }
+                    - { name : "edit" ,  icon : "pencil" , label : false , css_class : "btn btn-outline-primary" }  
+                    - { name : "delete" , icon : "trash" , label : false , css_class : "btn btn-outline-danger"}
+                fields:
+                    - { property: 'username', label: "Nom d'utilisateur" }
+                    - { property: 'email', label: "Email" }
+                    - { property: 'choiceroles', label: 'Role' }
+                    - { property: 'enabled', label: "Activé ?", type: 'toggle' }
+                    - { property: 'personnel', label: "Personnel" }
+                    - { property: 'last_login', label: "Dérniere connexion", type: 'datetime' }
+            
+            form:
+                title: 'Formulaire utilisateur'
+                    # - { property: 'last_login', label: "Dérniere connexion", type: 'datetime' }
+                    # - { property: 'numordre', icon: 'home', label: "Numéro d'ordre", type: 'choice', type_options: { expanded: true } }
+                form_options: { validation_groups: ['Default'] }
+            
+            new:
+                title: "Ajout d'un utilisateur"
+                fields:
+                    - { property: 'username', label: "Nom d'utilisateur" }
+                    - { property: 'email', label: "Email" }
+                    - { property: 'enabled', label: "Activé ?" }
+                    - { property: 'choiceroles', label: "Role", type: 'choice', type_options: { expanded: false, choices: '%choiceroles%', required: true } }
+                    - { property: 'plainPassword', type: 'repeated', type_options: { type: 'Symfony\Component\Form\Extension\Core\Type\PasswordType', first_options: {label: 'Mot de passe'}, second_options: {label: 'Confirmer le mot de passe'}, invalid_message: 'Les champs de mot de passe doivent correspondre.'}}
+                    - { property: 'personnel', label: "Personnel" }
+                form_options: { validation_groups: ['Default', 'Nouveau'] }
+            
+            edit:
+                title:  "Mise à jour de l'utilisateur"
+                fields:
+                    - { property: 'username', label: "Nom d'utilisateur" }
+                    - { property: 'email', label: "Email" }
+                    - { property: 'enabled', label: "Activé ?" }
+                    - { property: 'choiceroles', label: "Role", type: 'choice', type_options: { expanded: false, choices: '%choiceroles%', required: true } }
+                    - { property: 'personnel', label: "Personnel" }
+                form_options: { validation_groups: ['Default'] }
+
+            show:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'username', label: "Nom d'utilisateur" }
+                    - { property: 'email', label: "Email" }
+                    - { property: 'enabled', label: "Activé ?", type: 'toggle' }
+                    - { property: 'personnel', label: "Personnel" }
+                    - { property: 'last_login', label: "Dérniere connexion", type: 'datetime' }

@@ -5,6 +5,10 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'fr'
+    choiceroles:
+        # ROLE_CLIENT:      'ROLE_CLIENT'
+        # ROLE_CONTROLEUR:  'ROLE_CONTROLEUR'
+        ROLE_SUPER_ADMIN: 'ROLE_SUPER_ADMIN'
 
 services:
     # default configuration for services in *this* file
@@ -26,3 +30,11 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    app_bundle.subscriber:
+        class: App\EventListener\AppSubscriber
+        arguments: 
+            - "@service_container"
+            - "@request_stack"
+        tags:
+            - { name: kernel.event_subscriber }

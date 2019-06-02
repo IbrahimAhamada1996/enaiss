@@ -4,19 +4,24 @@ easy_admin:
     menu:
       - label: "Hopital"
         icon: "medkit"
+        role: [ROLE_SUPER_ADMIN]
         children:
           - {entity: DeclarationNaiss, icon: "folder-o", label: "Declaration Naissance"}
 
       - label: "Departement"
         icon: "building-o"
+        role: [ROLE_SUPER_ADMIN]
         children:
           - {entity: Commune, icon: "bookmark-o", label: "Commune"}
-          - {entity: LieuTravail, icon: "building", label: "LieuTravail"}
+          - {entity: LieuTravail, icon: "building", label: "Lieu de travail"}
           
       - label: "Personnel"
         icon: "user"
+        role: [ROLE_SUPER_ADMIN]
         children:
           - {entity: Personnel, icon: "id-card-o", label: "Personnel"}
           - {entity: Statue, icon: "flag-o", label: "Statue"}
+
+      - { entity: 'User', icon: 'users', label: 'Utilisateurs' }
           
         

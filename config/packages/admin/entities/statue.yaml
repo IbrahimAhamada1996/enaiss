@@ -2,6 +2,7 @@ easy_admin:
   entities:
     Statue:
       class: App\Entity\Statue
+      role: [ROLE_SUPER_ADMIN]
       list:
         title: "liste des statues"
         help: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

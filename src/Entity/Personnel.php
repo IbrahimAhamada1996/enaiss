@@ -44,6 +44,11 @@ class Personnel
      */
     private $declaration;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\User", mappedBy="personnel", cascade={"persist", "remove"})
+     */
+    private $user;
+
 
     public function __toString()
     {
@@ -111,6 +116,24 @@ class Personnel
     public function setDeclaration(?DeclarationNaiss $declaration): self
     {
         $this->declaration = $declaration;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newPersonnel = $user === null ? null : $this;
+        if ($newPersonnel !== $user->getPersonnel()) {
+            $user->setPersonnel($newPersonnel);
+        }
 
         return $this;
     }
