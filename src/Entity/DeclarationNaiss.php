@@ -188,38 +188,15 @@ class DeclarationNaiss
         return $this;
     }
 
-    public function getNomPrefecture(): ?string
+
+    public function getDateHeureAccouch(): ?\DateTimeInterface
     {
-        return $this->nom_prefecture;
+        return $this->date_heure_accouch;
     }
 
-    public function setNomPrefecture(string $nom_prefecture): self
+    public function setDateHeureAccouch(\DateTimeInterface $date_heure_accouch): self
     {
-        $this->nom_prefecture = $nom_prefecture;
-
-        return $this;
-    }
-
-    public function getDateAccouch(): ?\DateTimeInterface
-    {
-        return $this->date_accouch;
-    }
-
-    public function setDateAccouch(\DateTimeInterface $date_accouch): self
-    {
-        $this->date_accouch = $date_accouch;
-
-        return $this;
-    }
-
-    public function getHeureAccouch(): ?\DateTimeInterface
-    {
-        return $this->heure_accouch;
-    }
-
-    public function setHeureAccouch(\DateTimeInterface $heure_accouch): self
-    {
-        $this->heure_accouch = $heure_accouch;
+        $this->date_heure_accouch = $date_heure_accouch;
 
         return $this;
     }
