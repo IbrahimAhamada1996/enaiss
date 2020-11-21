@@ -7,7 +7,7 @@ easy_admin:
             
             list:
                 title: "Liste des utilisateurs"
-                actions : 
+                actions: 
                     - { name : "new" , label : "Ajouter un utilisateur", icon : "plus fa-fw"}
                     - { name: "show",  icon : "eye" , label : false , css_class : "btn btn-outline-success" }
                     - { name : "edit" ,  icon : "pencil" , label : false , css_class : "btn btn-outline-primary" }  

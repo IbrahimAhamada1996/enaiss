@@ -1,36 +1,31 @@
 <?php
+// src/Entity/User.php
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @ORM\Table(name="fos_users")
+ * @ORM\Entity
+ * @ORM\Table(name="fos_user")
  */
 class User extends BaseUser
 {
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-    
-    protected $choiceroles;
-
-    /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Personnel", inversedBy="user", cascade={"persist", "remove"})
-     */
-    private $personnel;
 
     public function __construct()
     {
         parent::__construct();
+        // your own logic
     }
 
-    /**
+     /**
      * Set choiceroles
      * @param string $choiceroles
      * @return User
@@ -55,15 +50,4 @@ class User extends BaseUser
         return $this->getRoles()[0];
     }
 
-    public function getPersonnel(): ?Personnel
-    {
-        return $this->personnel;
-    }
-
-    public function setPersonnel(?Personnel $personnel): self
-    {
-        $this->personnel = $personnel;
-
-        return $this;
-    }
 }
